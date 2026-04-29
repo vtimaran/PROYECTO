@@ -1,99 +1,180 @@
-<!DOCTYPE html>+UTF-8-
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOCUMENTO</title>
+    <title>Curso Desarrollo Web - Victor Timaran</title>
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: #333;
+            background-color: #f4f4f9;
+        }
+
+        /* ENCABEZADO */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header h3 {
+            font-weight: 300;
+            color: #bdc3c7;
+        }
+
+        /* NAVEGACIÓN */
+        nav {
+            background: #34495e;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        .btn-footer {
+            display: inline-block;
+            margin-top: 10px;
+            color: #f1c40f;
+            text-decoration: none;
+            font-size: 0.8rem;
+            border: 1px solid #f1c40f;
+            padding: 2px 10px;
+            border-radius: 5px;
+        }
+
+        /* CONTENEDOR PRINCIPAL (Layout) */
+        .container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        main {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        aside {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        /* PIE DE PÁGINA */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE (Para celulares) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
-    <h1>Curso Desarrollo web</h1>
-    <h3>Autor:Victor Timaran</h3>
-    <nav>
-        <ul>
-            <li><a href="/pages/text.html">Etiquetas de texto</a></li>
-            <li><a href="/pages/link.html">Enlaces </a></li>
-            <li><a href="/pages/structure.html">Estructura semantica</a></li>
-            <li><a href="/pages/multimedia.html">imagenes y enlaces</video> </a></li>
-            <li><a href="/pages/table.html">tabla </a></li>
-            <li><a href="/pages/tribute.html">tributo a Goku</a></li>
-            <li><a href="/pages/form.html">Formulario</a></li>
-            <li><a href="/pages/layaout.html">layaout y navegacion</a></li>
-
-
-        </ul>
-    </nav>
+    <header>
+        <h1>Curso Desarrollo Web</h1>
+        <h3>Autor: Anderson Potosi</h3>
+        <nav>
+            <ul>
+                <li><a href="/pages/text.html">Etiquetas de texto</a></li>
+                <li><a href="/pages/link.html">Enlaces </a></li>
+                <li><a href="/pages/structure.html">Estructura semántica</a></li>
+                <li><a href="/pages/multimedia.html">imagenes y enlaces</a></li>
+                <li><a href="/pages/table.html">tabla </a></li>
+                <li><a href="/pages/tribute.html">tributo a Goku</a></li>
+                <li><a href="/pages/form.html">Formulario</a></li>
+                <li><a href="/pages/layaout.html">layaout y navegación</a></li>
+                <li><a href="/pages/tributo_goku.html">TRIBUTO A GOKU</a></li>
+            </ul>
+            <a href="#footer" class="btn-footer">Ir al final</a>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>Seccion</h2>
-            </article>
-            <h3>Articulo</h3>
 
+    <div class="container">
+        <main>
+            <h1>Contenido Principal</h1>
+            <section>
+                <h2>Sección Informativa</h2>
+                <article>
+                    <h3>Artículo de Introducción</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati adipisci suscipit iure
+                        soluta expedita mollitia
+                        ea quam magni inventore quasi repellendus cumque corrupti, perspiciatis at placeat repellat
+                        voluptatum eius nisi
+                        eaque libero necessitatibus provident repudiandae totam?
+                    </p>
+                    <p>
+                        Temporibus facere quibusdam incidunt nostrum asperiores minima aliquam consequatur fugit
+                        perspiciatis nesciunt.
+                        Enim eveniet expedita saepe explicabo nisi iusto fugit ipsum eos nemo velit quibusdam tenetur
+                        dolor dignissimos
+                        minus rerum aliquam, porro eligendi dolores!
+                    </p>
+                </article>
+            </section>
+        </main>
 
+        <aside>
+            <h2>Barra Lateral</h2>
+            <p>Contenido adicional, publicidad o enlaces de interés relacionados con el curso de desarrollo web.</p>
+        </aside>
+    </div>
 
-
-
-
-
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dolore totam placeat ipsam eos tempore!
-                Repellendus earum laboriosam, dolor assumenda laborum sunt nobis cumque hic ratione. Ex dolores adipisci
-                veniam repudiandae incidunt eius rem! Quas obcaecati atque consequuntur rerum ipsam. Ipsam facilis
-                fugiat,
-                officia nobis vel libero tenetur recusandae maxime amet blanditiis beatae explicabo omnis ex error
-                doloremque dolorem voluptates eum tempora porro, harum debitis iusto. Porro aut, veritatis minus
-                voluptates,
-                voluptatibus qui officiis dolor eius, doloremque molestiae soluta cumque! Dolores illum minima placeat
-                vel
-                explicabo quia suscipit dolore quibusdam commodi voluptas, dignissimos delectus expedita? Eos, hic
-                tenetur
-                odio inventore possimus, animi consequuntur, illo iusto deserunt explicabo eius asperiores dolore quasi
-                sapiente magnam ut in repudiandae. Asperiores quam veritatis neque doloribus exercitationem doloremque
-                magni
-                enim maxime saepe accusantium qui, similique voluptatem cupiditate molestiae eos sint sequi quisquam
-                repellendus odit. Laborum voluptas architecto aliquam sunt doloremque praesentium voluptatibus maiores
-                expedita, recusandae natus maxime vel ex corporis doloribus atque esse, obcaecati, fuga nihil officia
-                est.
-                Blanditiis repudiandae ratione, sit qui fuga laudantium itaque sunt libero ab! Quis magni, temporibus
-                unde
-                nemo totam dolorum, recusandae fuga corporis esse quae fugit nisi, repellat obcaecati ut possimus? Eaque
-                sapiente omnis minima dolore nam sunt neque.</p>
-
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus, repudiandae. Nemo iure natus
-                quis
-                suscipit sed vero delectus veniam recusandae iste eaque animi eveniet, nisi sapiente corrupti minima hic
-                officiis rem maxime debitis molestiae minus eligendi voluptatibus praesentium. Quia molestiae maiores
-                aliquid ullam et vel minima nisi obcaecati impedit adipisci autem delectus, cum dolorem aliquam
-                accusantium
-                quibusdam odio iusto quo amet perspiciatis distinctio tenetur. Fugit impedit nihil officiis iusto
-                maiores
-                doloribus eaque esse veniam facilis, quis totam perferendis temporibus quia laborum deserunt, similique
-                ullam labore perspiciatis. Soluta sunt enim pariatur quo ipsa cupiditate vero dolore expedita ipsam
-                voluptatem deserunt tenetur asperiores distinctio voluptas, eligendi minima blanditiis ex quasi.
-                Repudiandae
-                repellat quo tenetur consectetur velit aut magnam! Placeat, a est libero earum veritatis, consectetur
-                necessitatibus ipsa saepe sunt totam perferendis alias eius illum ipsum fugiat quibusdam obcaecati.
-                Tenetur
-                doloribus adipisci ad fugiat unde corporis ab at suscipit? Possimus quo, nisi ipsam illum nemo soluta
-                aspernatur optio obcaecati voluptate, doloremque debitis. Sunt minima facere quo maiores repudiandae
-                quis
-                fugit quas maxime corrupti debitis assumenda distinctio esse atque adipisci, rem nemo ut repellendus
-                fuga
-                vel? Eaque tempore officia porro reiciendis dolor corrupti dolores, commodi debitis minus. Repudiandae
-                nesciunt eum qui architecto mollitia dolores.</p>
-            </article>
-        </section>
-    </main>
-    </aside>
-    <footer>
-        <h2>wuaracas -_-</h2>
+    <footer id="footer">
+        <h2>Pie de Página</h2>
+        <p>&copy; 2024 - Ejercicio de Desarrollo Web</p>
     </footer>
-    <!--<h1> Indice </h1>
-<a href="pages/link.html"> Ir a enlaces e imagenes <a/> -->
 
 </body>
 

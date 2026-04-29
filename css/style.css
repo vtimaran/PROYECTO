@@ -1,87 +1,57 @@
-/*style.css*/
-
-p {
-
-    color: rgb(255, 48, 48);
-    font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+/* CSS INTEGRADO PARA EVITAR ERRORES DE RUTA */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Selector de etiqueta: Pinta el fondo de TODO el <main> */
-main {
-    background-color: #ebcdcd;
-    padding: 20px;
+.container {
+    max-width: 800px;
+    background: #222;
+    border-top: 10px solid #FF8C00;
+    /* Naranja Goku */
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-
-/* Selector de clase: Solo afecta al párrafo con class="texto-destacado" */
-.texto-destacado {
-    color: #da0000;
-    font-weight: bold;
-}
-
-/* Selector de ID: Solo afecta a la barra de navegación con id="menu-principal" */
-#menu-principal {
-    background-color: #ff7878;
-    padding: 10px;
-}
-
-/* style.css */
 
 h1 {
-    color: blue();
-    font-size: 20px;
-
+    color: #FF8C00;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #0047AB;
+    /* Azul del traje */
 }
 
+.img-container {
+    border: 5px solid #FFD700;
+    /* Dorado Super Saiyan */
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+}
 
-/* Selector de etiqueta: Pinta el fondo de TODO el <main> */
-main {
-    background-color: #d884ce;
+img {
+    width: 100%;
+    display: block;
+}
+
+.bio {
+    line-height: 1.6;
+    font-size: 1.2rem;
+    text-align: left;
+    background: #333;
     padding: 20px;
+    border-radius: 8px;
 }
 
-p {
-    background-color: #60cd45;
-    padding: 20px;
-}
-
-/* Selector de clase: Solo afecta al párrafo con class="texto-destacado" */
-.texto-destacado {
-    color: #ff5722;
-    font-weight: bold;
-}
-
-/* Selector de ID: Solo afecta a la barra de navegación con id="menu-principal" */
-#menu-principal {
-    background-color: #333;
-    padding: 10px;
-}
-
-#destacado {
-    background-color: #1926b6;
-
-}
-
-/* TIPOGRAFIA */
-.titulo {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-}
-
-/*EJEMPLO MODELO DE CAJA*/
-CSS
-
-/* CSS */
-.tarjeta-proyecto {
-    background-color: white;
-
-    padding: 20px;
-    /* Espacio interior para que el texto respire */
-    margin: 15px;
-    /* Separación con otras tarjetas */
-    border-radius: 12px;
-    /* Esquinas redondeadas suaves */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    /* Efecto de tarjeta flotante */
+.quote {
+    font-style: italic;
+    color: #FFD700;
+    margin-top: 30px;
+    font-size: 1.5rem;
 }

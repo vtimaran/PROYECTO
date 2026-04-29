@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goku Tribute | El Legado de Toriyama</title>
+    <link href="../images/GOKU...jpg" rel="stylesheet">
+    <style>
+        :root {
+            --orange-goku: #FF8C00;
+            --blue-gi: #0047AB;
+            --yellow-ssj: #FFD700;
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text-light: #f4f4f4;
+            --toriyama-gold: #d4af37;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 3px solid var(--orange-goku);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--orange-goku);
+        }
+
+        /* --- HEADER --- */
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)),
+                url('../images/1000\ GOKU.jpg') no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 8px solid var(--orange-goku);
+        }
+
+        h1 {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(4rem, 12vw, 8rem);
+            color: var(--yellow-ssj);
+            text-shadow: 4px 4px 0px var(--blue-gi);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 4px 4px 0px var(--blue-gi), 0 0 20px var(--orange-goku);
+            }
+
+            to {
+                text-shadow: 4px 4px 0px var(--blue-gi), 0 0 40px var(--yellow-ssj);
+            }
+        }
+
+        /* --- CONTENIDO --- */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 35px;
+            margin-bottom: 40px;
+            border-left: 8px solid var(--orange-goku);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .author-card {
+            border-left-color: var(--toriyama-gold);
+            background: linear-gradient(145deg, #1a1a1a, #262012);
+        }
+
+        h2 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.5rem;
+            color: var(--orange-goku);
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 140, 0, 0.3);
+            display: inline-block;
+        }
+
+        .author-card h2 {
+            color: var(--toriyama-gold);
+        }
+
+        h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--yellow-ssj);
+            margin: 25px 0 10px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--yellow-ssj);
+            font-weight: bold;
+        }
+
+        /* --- IMÁGENES Y DECORACIÓN --- */
+        .featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 2px solid var(--toriyama-gold);
+        }
+
+        .sticker-kinton {
+            position: fixed;
+            bottom: 20px;
+            left: -150px;
+            width: 100px;
+            z-index: 9999;
+            pointer-events: none;
+            animation: fly-across 15s linear infinite;
+        }
+
+        .dragon-balls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            z-index: 999;
+            filter: drop-shadow(0 0 10px var(--orange-goku));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fly-across {
+            0% {
+                left: -150px;
+                transform: scaleX(1);
+            }
+
+            45% {
+                bottom: 80px;
+            }
+
+            50% {
+                left: 110%;
+                transform: scaleX(1);
+            }
+
+            51% {
+                transform: scaleX(-1);
+            }
+
+            95% {
+                bottom: 20px;
+            }
+
+            100% {
+                left: -150px;
+                transform: scaleX(-1);
+            }
+        }
+
+        .floating-goku {
+            float: right;
+            width: 120px;
+            margin: 0 0 15px 15px;
+            filter: drop-shadow(0 0 8px var(--yellow-ssj));
+        }
+
+        /* --- LISTAS Y GRIDS --- */
+        .trans-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .trans-list li {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--blue-gi);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tech-item {
+            background: #252525;
+            padding: 20px;
+            border-radius: 10px;
+            border-bottom: 3px solid var(--orange-goku);
+            transition: 0.3s;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            background: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #000;
+            border-top: 5px solid var(--blue-gi);
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        blockquote {
+            font-family: 'Bangers';
+            font-size: 2rem;
+            text-align: center;
+            color: var(--yellow-ssj);
+            margin: 50px 0;
+            padding: 0 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="../images/img_goku.jpg" alt="Goku Kinton" class="sticker-kinton">
+
+    <img src="../images/images.jpg" alt="Dragon Balls" class="dragon-balls">
+
+    <nav>
+        <ul>
+            <li><a href="#goku">Goku</a></li>
+            <li><a href="#toriyama">Akira Toriyama</a></li>
+            <li><a href="#powers">Poder</a></li>
+            <li><a href="#techniques">Técnicas</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="../images/GOKU...jpg" alt="DBZ Logo" style="width: 250px; margin-bottom: 20px;">
+        <h1>SON GOKU</h1>
+        <p style="font-family: 'Orbitron'; letter-spacing: 4px;">EL GUERRERO QUE SUPERÓ A LOS DIOSES</p>
+    </header>
+
+    <main class="container">
+
+        <section class="card" id="goku">
+            <img src="../images/1_13789.webp" alt="Goku Sticker" class="floating-goku">
+            <h2>¿Quién es Goku?</h2>
+            <p>Nacido como <span class="highlight">Kakarotto</span> en el Planeta Vegeta, fue enviado a la Tierra para
+                conquistarla. Sin embargo, un golpe en la cabeza cambió su destino, convirtiéndolo en el protector más
+                grande del universo.</p>
+            <p>Goku no pelea por obligación moral, sino por una <span class="highlight">pasión genuina</span> hacia el
+                combate y la autosuperación constante.</p>
+        </section>
+
+        <section class="card author-card" id="toriyama">
+            <h2>El Maestro: Akira Toriyama</h2>
+            <p style="color: var(--toriyama-gold); font-family: 'Orbitron'; margin-bottom: 15px; font-weight: bold;">
+                5 de abril de 1955 — 1 de marzo de 2024
+            </p>
+
+            <img src="../images/Toriyama.webp" alt="Akira Toriyama Legado" class="featured-image">
+
+            <p><strong>Akira Toriyama</strong> fue un mangaka y diseñador de personajes japonés, considerado uno de los
+                autores más importantes en la historia del manga, especialmente por la creación de <span
+                    class="highlight">Dragon Ball</span>. Alcanzó reconocimiento inicial tras crear <strong>Dr.
+                    Slump</strong> y actuar como diseñador para videojuegos legendarios como <strong>Dragon Quest,
+                    Chrono Trigger y Blue Dragon</strong>. Grandes autores como Eiichirō Oda (One Piece) y Masashi
+                Kishimoto (Naruto) lo citan como su máxima inspiración.</p>
+
+            <p>A lo largo de su carrera, ganó el Premio Shogakukan Manga y fue condecorado con la <strong>Orden de las
+                    Artes y las Letras</strong> en 2019. Su obra Dragon Ball ha vendido más de 260 millones de copias,
+                impulsando el auge del anime en todo el mundo occidental.</p>
+
+            <h3>Primeros Años</h3>
+            <p>Nacido en Kiyosu, Aichi, mostró desde joven pasión por dibujar animales y vehículos. Quedó fascinado por
+                películas como <em>101 dálmatas</em> y citó a <em>Astro Boy</em> de Osamu Tezuka como su influencia
+                inicial. Aunque se alejó del dibujo en la secundaria para disfrutar con amigos y ver cine
+                <em>tokusatsu</em> (como Ultraman), finalmente decidió entrar al mundo laboral del diseño creativo
+                inmediatamente después de graduarse, siguiendo su vocación artística pese a la oposición inicial.
+            </p>
+        </section>
+
+        <section class="card" id="powers">
+            <img src="../images/Tranformaciones-son-goku-dragon-ball.jpg" alt="Goku SSJ" class="floating-goku">
+            <h2>Evolución de Poder</h2>
+
+            <h3>Dragon Ball (Niño)</h3>
+            <ul class="trans-list">
+                <li><strong>Entrenamiento:</strong> Con el Abuelo Gohan y Maestro Roshi.</li>
+                <li><strong>Ozaru:</strong> Transformación en mono gigante al ver la luna llena.</li>
+            </ul>
+
+            <h3>Dragon Ball Z</h3>
+            <ul class="trans-list">
+                <li><strong>Kaioken:</strong> Multiplica fuerza y velocidad.</li>
+                <li><strong>Super Saiyajin (1, 2, 3):</strong> Desde la furia contra Freezer hasta el nivel máximo
+                    contra Majin Buu.</li>
+            </ul>
+
+            <h3>Dragon Ball Super</h3>
+            <ul class="trans-list">
+                <li><strong>SSJ Dios (Rojo):</strong> Nivel divino alcanzado con el ritual de seis Saiyajins.</li>
+                <li><strong>SSJ Blue:</strong> El poder del Dios imbuido en la forma Super Saiyajin.</li>
+                <li><strong>Ultra Instinto:</strong> El cuerpo reacciona sin pensar, superando a los dioses.</li>
+            </ul>
+
+            <h3>Dragon Ball GT</h3>
+            <ul class="trans-list">
+                <li><strong>Super Saiyajin 4:</strong> La unión de la esencia Ozaru y el poder Saiyajin.</li>
+            </ul>
+        </section>
+
+        <section class="card" id="techniques">
+            <h2>Técnicas Maestras</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h3>Kamehameha</h3>
+                    <p>Su ataque de energía firma, aprendido del Maestro Roshi y perfeccionado para destruir planetas.
+                    </p>
+                </div>
+                <div class="tech-item">
+                    <h3>Genkidama</h3>
+                    <p>Energía recolectada de todos los seres vivos. Es su recurso final contra la maldad pura.</p>
+                </div>
+                <div class="tech-item">
+                    <h3>Teletransportación</h3>
+                    <p>Movimiento instantáneo aprendido de los habitantes del Planeta Yardrat tras la batalla con
+                        Freezer.</p>
+                </div>
+            </div>
+        </section>
+
+        <blockquote>"Gracias, Maestro Toriyama, por enseñarnos a romper nuestros límites."</blockquote>
+
+    </main>
+
+    <footer>
+        <p>PROYECTO TRIBUTO &copy; 2026</p>
+        <p style="color: #666; font-size: 0.8rem; margin-top: 10px;">
+            Información biográfica basada en registros históricos de Akira Toriyama / Bird Studio / Shueisha.
+        </p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
