@@ -4,41 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        @keyframes aparecerDesdeAbajo {
-            0% {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            /* Inicia invisible y 30px abajo */
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            /* Termina visible y en su posición real */
-        }
-
-        /* 2. Le aplicamos la animación al elemento */
-        .alerta-animada {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            /* Ejecuta la animación "aparecerDesdeAbajo", dura 1 segundo, termina suavemente */
-            animation: aparecerDesdeAbajo 1s ease-out;
-        }
-    </style>
-
+    <title>Animaciones CSS 2 - Desarrollo Web</title>
+    <link rel="stylesheet" href="../css/common.css">
 </head>
 
 <body>
-    <div class="alerta-animada">
-        <p>¡Nuevo proyecto disponible!</p>
-    </div>
+    <header>
+        <h1>Animaciones CSS 2</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="structure.html">Estructura</a></li>
+            <li><a href="animation1.html">Animación 1</a></li>
+            <li><a href="animation2.html">Animación 2</a></li>
+            <li><a href="form.html">Formulario</a></li>
+            <li><a href="tributo_goku.html">Tributo Goku</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <div class="alerta-animada">
+                <p>¡Nuevo proyecto disponible!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Desarrollo Web - Victor Timaran</p>
+    </footer>
 </body>
 
 </html>
